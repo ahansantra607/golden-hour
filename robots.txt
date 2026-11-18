@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ahansantra607.github.io/golden-hour/sitemap.xml
