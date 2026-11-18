@@ -1,0 +1,8 @@
+[
+ {"id":"amber-evening","name":"Amber Evening","category":"Warm","price":899,"notes":"Soft amber, vanilla and a hint of spice.","description":"A warm, enveloping scent for slow evenings.","tone":"#dfc8a7","jar":["#b8a184","#f0e3cf","#d5c0a3"]},
+ {"id":"rose-atelier","name":"Rose Atelier","category":"Floral","price":949,"notes":"Fresh rose, soft petals and clean musk.","description":"A gentle floral with a modern, airy finish.","tone":"#e7d0c9","jar":["#c7a59b","#f3e4dc","#dec5bb"]},
+ {"id":"cedar-smoke","name":"Cedar & Smoke","category":"Woody","price":999,"notes":"Cedarwood, sandalwood and quiet smoke.","description":"Grounded woods for a calm, collected space.","tone":"#c8c4b5","jar":["#999783","#e2dfcf","#b8b7a2"]},
+ {"id":"morning-dew","name":"Morning Dew","category":"Fresh","price":849,"notes":"Green leaves, citrus peel and cool air.","description":"Bright and clean, like opening the windows.","tone":"#d3ddd0","jar":["#9aab98","#e6eee2","#bdcbbb"]},
+ {"id":"vanilla-noir","name":"Vanilla Noir","category":"Warm","price":899,"notes":"Creamy vanilla, tonka and toasted sugar.","description":"A familiar comfort with a little depth.","tone":"#d9c7b6","jar":["#a58b76","#eee0d1","#c7ad98"]},
+ {"id":"jasmine-hour","name":"Jasmine Hour","category":"Floral","price":949,"notes":"Jasmine blossom, white tea and soft woods.","description":"An understated floral for the end of the day.","tone":"#dedbc8","jar":["#aaa68d","#eeead8","#c9c4aa"]}
+]
