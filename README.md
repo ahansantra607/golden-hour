@@ -4,9 +4,9 @@ A static, responsive storefront for Golden Hour. It is designed for GitHub Pages
 
 ## Publish with GitHub Pages
 1. Open **Settings → Pages** in this repository.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select **main** and **/(root)**, then Save.
-4. Wait for the Pages deployment to finish. The site address is https://ahansantra607.github.io/golden-hour/.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. The workflow in `.github/workflows/pages.yml` deploys the site automatically whenever changes are pushed to `main`.
+4. The site address is https://ahansantra607.github.io/golden-hour/.
 
 ## Edit the catalogue
 Edit products.json directly on GitHub. Each product has an id, name, category, price (INR), notes, description and visual colour values. Keep ids unique. Prices and product details here are sample content and must be checked before accepting orders.
