@@ -56,3 +56,34 @@ $("#checkout-form").addEventListener("submit",e=>{
  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(msg),"_blank","noopener");
 });
 $("#year").textContent=new Date().getFullYear();
+
+
+// Subtle scroll reveals; content remains visible when motion is unavailable.
+(function(){
+ const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const revealTargets=document.querySelectorAll(".section-heading,.quote-band,.story-art,.story-copy,.details>.eyebrow,.details>h2,.detail-grid article,.closing>div");
+ revealTargets.forEach(el=>el.classList.add("reveal"));
+ if(reduce||!("IntersectionObserver" in window)){
+  revealTargets.forEach(el=>el.classList.add("is-visible"));
+  return;
+ }
+ document.body.classList.add("reveal-ready");
+ const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add("is-visible");observer.unobserve(entry.target)}
+  });
+ },{threshold:.12,rootMargin:"0px 0px -35px 0px"});
+ revealTargets.forEach(el=>observer.observe(el));
+ const productObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add("is-visible");productObserver.unobserve(entry.target)}
+  });
+ },{threshold:.08});
+ const watchProducts=()=>document.querySelectorAll(".product-card:not(.is-visible)").forEach((card,i)=>{
+  card.style.transitionDelay=(i%3)*90+"ms";
+  productObserver.observe(card);
+ });
+ watchProducts();
+ const gridNode=document.querySelector("#product-grid");
+ if(gridNode)new MutationObserver(watchProducts).observe(gridNode,{childList:true});
+})();
